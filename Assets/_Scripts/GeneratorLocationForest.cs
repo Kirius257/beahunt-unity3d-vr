@@ -14,9 +14,9 @@ public class GeneratorLocationForest: MonoBehaviour
     {
 
         // Loop through all the positions within our forest boundary.
-        for (int x = 1; x < SizeLocation; x += elementSpacing)
+        for (int x = 3; x < SizeLocation; x += elementSpacing)
         {
-            for (int z = 1; z < SizeLocation; z += elementSpacing)
+            for (int z = 3; z < SizeLocation; z += elementSpacing)
             {
 
                 // For each position, loop through each element...
