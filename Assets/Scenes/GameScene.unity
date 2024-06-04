@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeOfDay: 0
-  DayDuration: 30
+  DayDuration: 1200
   DaySkybox: {fileID: 2100000, guid: 8a5943983a1e9b34d9a6a9abec28e4a1, type: 2}
   NightSkybox: {fileID: 2100000, guid: e8f84a3092741a845a0ed1f862a17896, type: 2}
   AudioManager: {fileID: 1931080195}
@@ -12035,7 +12035,7 @@ MonoBehaviour:
     - {fileID: 4628284441596811238, guid: ac675a855ff49e04597e661bf4bc74ce, type: 3}
     - {fileID: 5380895682773476401, guid: 9e2788eb46c961445a69590bba9941b4, type: 3}
   - name: Trees
-    density: 8
+    density: 7
     prefabs:
     - {fileID: 1335726306580732, guid: 23f312332b5cd5542ba196450880e89b, type: 3}
     - {fileID: 1656226002977108, guid: e191e21fcb275784a9f8b6d08dcd932c, type: 3}
@@ -12046,6 +12046,13 @@ MonoBehaviour:
     prefabs:
     - {fileID: 1086353713108280, guid: 10dcade9ef34ab642846c4b889ac76e7, type: 3}
     - {fileID: 1793648613423140, guid: 88cc729ed2bce0b458f679b575dab345, type: 3}
+  - name: Monsters
+    density: 9
+    prefabs:
+    - {fileID: 919132149155446097, guid: bdbb2a7f227b0fe4fab4b0c6075db8f6, type: 3}
+    - {fileID: 919132149155446097, guid: 081418d0800ae104d9c6172fab563d6d, type: 3}
+    - {fileID: 919132149155446097, guid: 4a2df1ea8edca954d9ce0510aa190b47, type: 3}
+    - {fileID: 919132149155446097, guid: 8141f89fdff7e1547be3e278b33a6e67, type: 3}
 --- !u!114 &1294173741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13163,7 +13170,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847505184}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 10bde48ef542d6a4fbee12145283824a, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 7c6c9ecbde4aa4641b50fde4fd4759f1, type: 2}
   m_EnableTreeColliders: 1

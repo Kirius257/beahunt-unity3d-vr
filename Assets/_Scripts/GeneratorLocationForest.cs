@@ -12,7 +12,6 @@ public class GeneratorLocationForest: MonoBehaviour
 
     private void Start()
     {
-
         // Loop through all the positions within our forest boundary.
         for (int x = 3; x < SizeLocation; x += elementSpacing)
         {
@@ -31,17 +30,34 @@ public class GeneratorLocationForest: MonoBehaviour
                     {
 
                         // Add random elements to element placement.
-                        Vector3 position = new Vector3(x, 0f, z);
-                        Vector3 offset = new Vector3(Random.Range(-2.35f, 2.55f), 0f, Random.Range(-2.25f, 2.25f));
-                        Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(0, 360f), Random.Range(0, 5f));
-                        Vector3 scale = Vector3.one * Random.Range(3.0f, 3.25f);
+                        if (elements[i].name != "Monsters")
+                        {
+                            Vector3 position = new Vector3(x, 0f, z);
+                            Vector3 offset = new Vector3(Random.Range(-2.35f, 2.55f), 0f, Random.Range(-2.25f, 2.25f));
+                            Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(0, 360f), Random.Range(0, 5f));
+                            Vector3 scale = Vector3.one * Random.Range(3.0f, 3.25f);
 
-                        // Instantiate and place element in world.
-                        GameObject newElement = Instantiate(element.GetRandom());
-                        newElement.transform.SetParent(transform);
-                        newElement.transform.position = Clamp(position + offset,1,500);
-                        newElement.transform.eulerAngles = rotation;
-                        newElement.transform.localScale = scale;
+                            // Instantiate and place element in world.
+                            GameObject newElement = Instantiate(element.GetRandom());
+                            newElement.transform.SetParent(transform);
+                            newElement.transform.position = Clamp(position + offset, 1, 500);
+                            newElement.transform.eulerAngles = rotation;
+                            newElement.transform.localScale = scale;
+                        }
+                        else
+                        {
+                            Vector3 position = new Vector3(x, 0f, z);
+                            Vector3 offset = new Vector3(Random.Range(-2.35f, 2.55f), 0f, Random.Range(-2.25f, 2.25f));
+                            Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(0, 360f), Random.Range(0, 5f));
+                            Vector3 scale = Vector3.one * Random.Range(0.0f, 0.01f);
+
+                            // Instantiate and place element in world.
+                            GameObject newElement = Instantiate(element.GetRandom());
+                            newElement.transform.SetParent(transform);
+                            newElement.transform.position = Clamp(position + offset, 1, 500);
+                            newElement.transform.eulerAngles = rotation;
+                            newElement.transform.localScale = scale;
+                        }
 
                         // Break out of this for loop to ensure we don't place another element at this position.
                         break;
