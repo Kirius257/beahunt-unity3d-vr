@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeOfDay: 0
-  DayDuration: 1200
+  DayDuration: 60
   DaySkybox: {fileID: 2100000, guid: 8a5943983a1e9b34d9a6a9abec28e4a1, type: 2}
   NightSkybox: {fileID: 2100000, guid: e8f84a3092741a845a0ed1f862a17896, type: 2}
   AudioManager: {fileID: 1931080195}
